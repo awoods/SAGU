@@ -16,7 +16,7 @@
 //    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //////////////////////////////////////////////////////////////////////////////////
 
-package com.brianmcmichael.SimpleGlacierUploader;
+package org.duraspace.glacier;
 
 public class Endpoints {
 	

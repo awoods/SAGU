@@ -17,7 +17,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-package com.brianmcmichael.SimpleGlacierUploader;
+package org.duraspace.glacier;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -169,32 +169,25 @@ class AmazonDownloadRequest extends JFrame implements ActionListener, WindowList
     	
   	
     
-	@Override
 	public void windowActivated(WindowEvent arg0) {
 		
 	}
-	@Override
 	public void windowClosed(WindowEvent arg0) {
 		
 		
 	}
-	@Override
 	public void windowClosing(WindowEvent arg0) {
 		
 	}
-	@Override
 	public void windowDeactivated(WindowEvent arg0) {
 		
 	}
-	@Override
 	public void windowDeiconified(WindowEvent arg0) {
 		
 	}
-	@Override
 	public void windowIconified(WindowEvent arg0) {
 		
 	}
-	@Override
 	public void windowOpened(WindowEvent arg0) {
 		jtfDownloadField.setText("");
 		jtfDownloadField.requestFocus();
@@ -202,8 +195,7 @@ class AmazonDownloadRequest extends JFrame implements ActionListener, WindowList
 	
 
 	
-	@Override
-	public void actionPerformed(ActionEvent e) 
+	public void actionPerformed(ActionEvent e)
 	{
 		
 		

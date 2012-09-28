@@ -16,7 +16,7 @@
 //    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //////////////////////////////////////////////////////////////////////////////////
 
-package com.brianmcmichael.SimpleGlacierUploader;
+package org.duraspace.glacier;
 
 import java.awt.Toolkit;
 import java.awt.datatransfer.DataFlavor;
@@ -50,7 +50,6 @@ public class ContextMenuMouseListener extends MouseAdapter {
     public ContextMenuMouseListener() {
         undoAction = new AbstractAction("Undo") {
 
-			@Override
             public void actionPerformed(ActionEvent ae) {
                     textComponent.setText("");
                     textComponent.replaceSelection(savedString);
@@ -64,7 +63,6 @@ public class ContextMenuMouseListener extends MouseAdapter {
 
         cutAction = new AbstractAction("Cut") {
 
-			@Override
             public void actionPerformed(ActionEvent ae) {
                 lastActionSelected = Actions.CUT;
                 savedString = textComponent.getText();
@@ -76,7 +74,6 @@ public class ContextMenuMouseListener extends MouseAdapter {
 
         copyAction = new AbstractAction("Copy") {
 
-            @Override
             public void actionPerformed(ActionEvent ae) {
                 lastActionSelected = Actions.COPY;
                 textComponent.copy();
@@ -87,7 +84,6 @@ public class ContextMenuMouseListener extends MouseAdapter {
 
         pasteAction = new AbstractAction("Paste") {
 
-            @Override
             public void actionPerformed(ActionEvent ae) {
                 lastActionSelected = Actions.PASTE;
                 savedString = textComponent.getText();
@@ -100,7 +96,6 @@ public class ContextMenuMouseListener extends MouseAdapter {
 
         selectAllAction = new AbstractAction("Select All") {
 
-            @Override
             public void actionPerformed(ActionEvent ae) {
                 lastActionSelected = Actions.SELECT_ALL;
                 textComponent.selectAll();

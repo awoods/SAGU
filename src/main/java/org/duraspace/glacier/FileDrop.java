@@ -1,4 +1,4 @@
-package com.brianmcmichael.SimpleGlacierUploader;
+package org.duraspace.glacier;
 
 
 import java.awt.datatransfer.DataFlavor;

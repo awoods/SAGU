@@ -16,7 +16,7 @@
 //    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //////////////////////////////////////////////////////////////////////////////////
 
-package com.brianmcmichael.SimpleGlacierUploader;
+package org.duraspace.glacier;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -44,6 +44,7 @@ import com.amazonaws.AmazonServiceException;
 //import com.amazonaws.auth.PropertiesCredentials;
 import com.amazonaws.services.glacier.AmazonGlacierClient;
 import com.amazonaws.services.glacier.model.DeleteArchiveRequest;
+import org.duraspace.glacier.SimpleGlacierUploader;
 
 class DeleteArchiveFrame extends JFrame implements ActionListener, WindowListener
 {
@@ -78,7 +79,9 @@ class DeleteArchiveFrame extends JFrame implements ActionListener, WindowListene
 		deleteClient = client;
 		deleteVault = vaultName;
     	
-		JLabel label1 = new JLabel("ArchiveID to Delete from " +SimpleGlacierUploader.getRegion(thisRegion)+":");
+		JLabel label1 = new JLabel("ArchiveID to Delete from " +
+                                       SimpleGlacierUploader.getRegion(
+                                           thisRegion)+":");
         jtfDeleteField = new JTextField(100);
         jbtDelete = new JButton("Delete");
         jbtBack = new JButton("Back");
@@ -145,45 +148,37 @@ class DeleteArchiveFrame extends JFrame implements ActionListener, WindowListene
   	
     	
   	
-    
-	@Override
+
 	public void windowActivated(WindowEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
 	public void windowClosed(WindowEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
 	public void windowClosing(WindowEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
 	public void windowDeactivated(WindowEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
 	public void windowDeiconified(WindowEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
 	public void windowIconified(WindowEvent arg0) {
 		// TODO Auto-generated method stub
 		
 	}
-	@Override
 	public void windowOpened(WindowEvent arg0) {
 		jtfDeleteField.setText("");
 		jtfDeleteField.requestFocus();
 		
 	}
-	@Override
-	public void actionPerformed(ActionEvent e) 
+	public void actionPerformed(ActionEvent e)
 	{
 		if(e.getSource() == jbtDelete)
         {

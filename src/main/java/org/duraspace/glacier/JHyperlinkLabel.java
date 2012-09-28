@@ -17,7 +17,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-package com.brianmcmichael.SimpleGlacierUploader;
+package org.duraspace.glacier;
+
+import org.duraspace.glacier.SimpleGlacierUploader;
 
 import java.awt.Color;
 import java.awt.Cursor;

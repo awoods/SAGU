@@ -16,7 +16,7 @@
 //    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //////////////////////////////////////////////////////////////////////////////////
 
-package com.brianmcmichael.SimpleGlacierUploader;
+package org.duraspace.glacier;
 
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
@@ -102,7 +102,7 @@ public class SimpleGlacierUploader extends Frame implements ActionListener
 	//Other Strings
 	public static final String DOWNLOAD_STRING = "Download Archive";
 	public static final String INVENTORY_REQUEST_STRING = "Request Inventory";
-	public static final String COPYRIGHT_STRING = "Simple Amazon Glacier Uploader\nVersion "+versionNumber+"\n ©2012 brian@brianmcmichael.com";
+	public static final String COPYRIGHT_STRING = "Simple Amazon Glacier Uploader\nVersion "+versionNumber+"\n ï¿½2012 brian@brianmcmichael.com";
 	public static final String UPDATE_STRING = "Check for Update";
 	public static final String UPDATE_SITE_STRING = "http://simpleglacieruploader.brianmcmichael.com/";
 	public static final String ABOUT_WINDOW_STRING = ""+COPYRIGHT_STRING+"\n\nReport errors or direct correspondence to: brian@brianmcmichael.com\n\nSimple Amazon Glacier Uploader is free and always will be. \nYour feedback is appreciated.\nThis program is not any way affiliated with Amazon Web Services or Amazon.com.";
@@ -167,7 +167,7 @@ public class SimpleGlacierUploader extends Frame implements ActionListener
 	ImageIcon updateIcon = new ImageIcon(Toolkit.getDefaultToolkit().getImage(updateIconUrl));
 	URL userUrl = getClass().getResource("/littleguy.png");
 	ImageIcon userIcon = new ImageIcon(Toolkit.getDefaultToolkit().getImage(userUrl));
-	URL logoUrl = getClass().getResource("/SAGU.png");
+	URL logoUrl = getClass().getResource("/duraspace.png");
 	JLabel logoLabel = new JLabel(new ImageIcon( Toolkit.getDefaultToolkit().getImage(logoUrl) ));
 		
 	File uploadFile = null;
@@ -202,7 +202,7 @@ public class SimpleGlacierUploader extends Frame implements ActionListener
 		
 		
 	JPanel titlePanel = new JPanel();
-		JLabel titleLabel = new JLabel("Simple Amazon Glacier Uploader "+versionNumber);
+		JLabel titleLabel = new JLabel("DuraSpace Glacier Uploader "+versionNumber);
 	
 	JPanel credentialsPanel = new JPanel(new GridLayout(4,1,10,10));
 		JHyperlinkLabel accessLabel = new JHyperlinkLabel(ACCESS_LABEL);  //v0.3
@@ -943,7 +943,6 @@ public class SimpleGlacierUploader extends Frame implements ActionListener
 		return client;
 	}
 	
-	@Override
 	public void actionPerformed(ActionEvent e) {
 		
 		String accessString = getAccessField();		
@@ -1376,7 +1375,7 @@ public class SimpleGlacierUploader extends Frame implements ActionListener
 	{
 		SimpleGlacierUploader g = new SimpleGlacierUploader();
 		g.setBounds(300,300,650,475);
-		g.setTitle("Simple Amazon Glacier Uploader "+versionNumber);
+		g.setTitle("DuraSpace Glacier Uploader "+versionNumber);
 		g.setIconImage(Toolkit.getDefaultToolkit().getImage("/glaciericon.png"));
 		g.setVisible(true);
 		

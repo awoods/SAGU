@@ -1,4 +1,4 @@
-package com.brianmcmichael.SimpleGlacierUploader;
+package org.duraspace.glacier;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -37,6 +37,7 @@ import com.amazonaws.services.glacier.model.GetJobOutputResult;
 import com.amazonaws.services.glacier.model.InitiateJobRequest;
 import com.amazonaws.services.glacier.model.InitiateJobResult;
 import com.amazonaws.services.glacier.model.JobParameters;
+import org.duraspace.glacier.SimpleGlacierUploader;
 
 public class InventoryRequest extends JFrame implements ActionListener, WindowListener 
 {
@@ -74,7 +75,8 @@ public class InventoryRequest extends JFrame implements ActionListener, WindowLi
 		this.irVault = thisVault;
 		this.irRegion = thisRegion;	
      	
-		JLabel label1 = new JLabel("Request Archive Inventory from " + irVault + " in server region " +SimpleGlacierUploader.getRegion(irRegion)+":");
+		JLabel label1 = new JLabel("Request Archive Inventory from " + irVault + " in server region " +
+                                       SimpleGlacierUploader.getRegion(irRegion)+":");
         JLabel label2 = new JLabel(DOWNLOAD_NOTICE);
         jbtInventoryRequest = new JButton("Request Inventory");
         jbtBack = new JButton("Back");
@@ -141,40 +143,32 @@ public class InventoryRequest extends JFrame implements ActionListener, WindowLi
     	
   	
     
-	@Override
 	public void windowActivated(WindowEvent arg0) {
 		
 	}
-	@Override
 	public void windowClosed(WindowEvent arg0) {
 		
 		
 	}
-	@Override
 	public void windowClosing(WindowEvent arg0) {
 		
 	}
-	@Override
 	public void windowDeactivated(WindowEvent arg0) {
 		
 	}
-	@Override
 	public void windowDeiconified(WindowEvent arg0) {
 		
 	}
-	@Override
 	public void windowIconified(WindowEvent arg0) {
 		
 	}
-	@Override
 	public void windowOpened(WindowEvent arg0) {
 	
 	}
 	
 
 	
-	@Override
-	public void actionPerformed(ActionEvent e) 
+	public void actionPerformed(ActionEvent e)
 	{
 		
 		

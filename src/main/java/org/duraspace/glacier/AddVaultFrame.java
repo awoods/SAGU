@@ -1,4 +1,4 @@
-package com.brianmcmichael.SimpleGlacierUploader;
+package org.duraspace.glacier;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -126,44 +126,36 @@ import com.amazonaws.services.glacier.model.CreateVaultResult;
 	    	
 	  	
 	    
-		@Override
 		public void windowActivated(WindowEvent arg0) {
 			
 			
 		}
-		@Override
 		public void windowClosed(WindowEvent arg0) {
 			
 			
 		}
-		@Override
 		public void windowClosing(WindowEvent arg0) {
 			
 			
 		}
-		@Override
 		public void windowDeactivated(WindowEvent arg0) {
 			
 			
 		}
-		@Override
 		public void windowDeiconified(WindowEvent arg0) {
 			
 			
 		}
-		@Override
 		public void windowIconified(WindowEvent arg0) {
 			
 			
 		}
-		@Override
 		public void windowOpened(WindowEvent arg0) {
 			jtfAddField.setText("");
 			jtfAddField.requestFocus();
 			
 		}
-		@Override
-		public void actionPerformed(ActionEvent e) 
+		public void actionPerformed(ActionEvent e)
 		{
 			if(e.getSource() == jbtAdd)
 	        {
